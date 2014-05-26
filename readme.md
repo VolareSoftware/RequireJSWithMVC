@@ -1,1 +1,1 @@
-Sample code for blog posts here: http://volaresystems.com/blog
+Sample code for blog post here: http://volaresystems.com/blog
