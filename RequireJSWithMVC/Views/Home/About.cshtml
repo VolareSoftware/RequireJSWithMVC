@@ -1,5 +1,11 @@
-﻿<h2>Page 2</h2>
+﻿@using RequireJSWithMVC.Extensions
+<h2>Page 2</h2>
 
 <p>
     The current date/time is <span id="currentDateTime"></span>.
 </p>
+
+@section scripts
+{
+    @Html.InitPageMainModule("main-currentDateTime")
+}

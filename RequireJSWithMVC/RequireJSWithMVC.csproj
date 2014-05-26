@@ -111,13 +111,17 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Extensions\RequireJsHelpers.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Scripts\app\main-currentDateTime.js" />
     <Content Include="Scripts\app\currentDateTime.js" />
+    <Content Include="Scripts\app\kickoff.js" />
+    <Content Include="Scripts\lib\domReady.js" />
     <Content Include="Scripts\main.js" />
     <Content Include="Styles\lib\bootstrap-theme.css" />
     <Content Include="Styles\lib\bootstrap.css" />
@@ -128,15 +132,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <None Include="Scripts\lib\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\lib\bootstrap.js" />
     <Content Include="Scripts\lib\jquery-2.1.1.js" />
-    <None Include="Scripts\lib\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\lib\jquery.validate.js" />
     <Content Include="Scripts\lib\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\lib\moment-with-langs.js" />
     <Content Include="Scripts\lib\moment.js" />
-    <Content Include="Scripts\lib\r.js" />
     <Content Include="Scripts\lib\require.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

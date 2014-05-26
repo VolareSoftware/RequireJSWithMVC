@@ -1,15 +1,20 @@
-﻿// RequireJS config for app
-require.config({
+﻿require.config({
     baseUrl: "/Scripts/app",
     paths: {
-        jquery: "../lib/jquery-2.1.0",
+        jquery: "../lib/jquery-2.1.1",
         jqueryValidate: "../lib/jquery.validate",
         jqueryValidateUnobtrusive: "../lib/jquery.validate.unobtrusive",
         bootstrap: "../lib/bootstrap",
-        moment: "../lib/moment"
+        moment: "../lib/moment",
+        domReady: "../lib/domReady",
     },
     shim: {
         jqueryValidate: ["jquery"],
         jqueryValidateUnobtrusive: ["jquery", "jqueryValidate"]
     }
 });
+
+require(["kickoff"], function(kickoff) {
+        kickoff.init();
+    }
+);
