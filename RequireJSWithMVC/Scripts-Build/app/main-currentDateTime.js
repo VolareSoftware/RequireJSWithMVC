@@ -1,0 +1,1 @@
+require(["jquery","moment"],function(e,t){var n=(new t).format("M/D/YYYY h:mm:ss A");e("#currentDateTime").text(n)}),define("main-currentDateTime",function(){});

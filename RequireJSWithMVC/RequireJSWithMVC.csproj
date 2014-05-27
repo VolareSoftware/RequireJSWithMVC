@@ -118,6 +118,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Build\build-scripts.js" />
+    <Content Include="App_Build\build-styles.js" />
+    <Content Include="App_Build\r.js" />
     <Content Include="Scripts\app\main-currentDateTime.js" />
     <Content Include="Scripts\app\currentDateTime.js" />
     <Content Include="Scripts\app\kickoff.js" />
@@ -128,7 +131,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Styles\app\Site.css" />
+    <Content Include="Styles\app\site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
@@ -138,6 +141,7 @@
     <Content Include="Scripts\lib\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\lib\moment.js" />
     <Content Include="Scripts\lib\require.js" />
+    <Content Include="Styles\main.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -186,6 +190,10 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <PropertyGroup>
+    <PreBuildEvent>if $(ConfigurationName) == Release node "$(ProjectDir)App_Build\r.js" -o "$(ProjectDir)App_Build\build-scripts.js"
+if $(ConfigurationName) == Release node "$(ProjectDir)App_Build\r.js" -o "$(ProjectDir)App_Build\build-styles.js"</PreBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

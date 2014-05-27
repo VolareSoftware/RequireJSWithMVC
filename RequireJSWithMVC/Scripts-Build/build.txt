@@ -1,0 +1,14 @@
+
+main.js
+----------------
+app/kickoff.js
+main.js
+lib/jquery-2.1.1.js
+lib/jquery.validate.js
+lib/jquery.validate.unobtrusive.js
+lib/bootstrap.js
+lib/moment.js
+
+app/main-currentDateTime.js
+----------------
+app/main-currentDateTime.js
