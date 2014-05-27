@@ -1,10 +1,11 @@
-﻿<!DOCTYPE html>
+﻿@using RequireJSWithMVC.Extensions
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adding RequireJS to an ASP.NET MVC project</title>
-    <link href="~/Styles/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="@Html.StylesPath("main.css")" />
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -29,7 +30,7 @@
         @RenderBody()
     </div>
 
-    <script src="/Scripts/lib/require.js"></script>
+    <script src="@Html.ScriptsPath("lib/require.js")"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>

@@ -10,11 +10,21 @@ namespace RequireJSWithMVC.Extensions
         public static MvcHtmlString InitPageMainModule(this HtmlHelper helper, string pageModule)
         {
             var require = new StringBuilder();
+
+#if (DEBUG)
             var scriptsPath = "~/Scripts/";
+#else
+            var scriptsPath = "~/Scripts-Build/";
+#endif
+
             var absolutePath = VirtualPathUtility.ToAbsolute(scriptsPath);
 
             require.AppendLine("<script>");
+#if (DEBUG)
             require.AppendFormat("    require([\"{0}main.js\"]," + Environment.NewLine, absolutePath);
+#else
+            require.AppendFormat("    require([\"{0}main.js\"]," + Environment.NewLine, absolutePath);
+#endif
             require.AppendLine("        function() {");
             require.AppendFormat("            require([\"{0}\", \"domReady!\"]);" + Environment.NewLine, pageModule);
             require.AppendLine("        }");

@@ -12,6 +12,7 @@
         include: [
             // These JS files will be on EVERY page in the main.js file
             // So they should be the files we will almost always need everywhere
+            "domReady",
             "jquery",
             "jqueryValidate",
             "jqueryValidateUnobtrusive",
