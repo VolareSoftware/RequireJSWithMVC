@@ -23,7 +23,7 @@ namespace RequireJSWithMVC.Extensions
 #if (DEBUG)
             require.AppendFormat("    require([\"{0}main.js\"]," + Environment.NewLine, absolutePath);
 #else
-            require.AppendFormat("    require([\"{0}main.js\"]," + Environment.NewLine, absolutePath);
+            require.AppendFormat("    require([\"{0}main.js?v={1}\"]," + Environment.NewLine, absolutePath, helper.AssemblyRevisionNumber());
 #endif
             require.AppendLine("        function() {");
             require.AppendFormat("            require([\"{0}\", \"domReady!\"]);" + Environment.NewLine, pageModule);
